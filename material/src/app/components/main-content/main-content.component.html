@@ -1,0 +1,164 @@
+<!--<mat-card><h3>Hey its Simple!!!!!!</h3></mat-card> -->
+
+
+<mat-grid-list *ngIf="!isSmall" cols="2"rowHeight="50%" style="margin-bottom: 0%;">
+  <!--First tile in the grid-->
+<mat-grid-tile rowspan="1">  
+  <mat-card *ngIf="!isSmall" class="edit mat-elevation-z5">
+       <mat-card-header>
+         <h2>Search Here</h2>
+       </mat-card-header>
+       <mat-card-content style="padding-left:20%;padding-right:20%;">
+        <mat-form-field appearance="legacy" style="width:100%;">
+          <mat-label>Enter Name</mat-label>
+          <input matInput placeholder="ex:lara">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="legacy" style="width:100%">
+          <mat-label>Enter Id</mat-label>
+          <input matInput placeholder="ex:2345">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+  
+        <br>
+        <button mat-button color="primary" class="hov" style="border-radius:30px;background-color:rgb(167, 238, 238) ;" (click)="te.toggle()">Search</button>
+   </mat-card-content>
+  </mat-card>
+</mat-grid-tile>
+
+<!--second tile in the grid-->
+
+<mat-grid-tile rowspan="2">
+<mat-sidenav-container style="width:100%;height:100%">
+
+<mat-sidenav #te  style="width:100%;height:100%;" class="mat-elevation-z20">
+  <mat-toolbar color="primary">
+    <h2>DETAILS</h2>
+  </mat-toolbar>
+
+  <table style="display: flex;flex-direction: column;justify-content: center;align-items:center;">
+
+  <tr>
+    <td><h4 style="font-weight: bold;">Name</h4></td>
+    <td></td>
+    <td></td>
+    <td><h4>buji</h4></td>
+  </tr>
+  <tr>
+    <td><h4 style="font-weight: bold;">Age</h4></td>
+    <td></td>
+    <td></td>
+    <td><h4>21</h4></td>
+  </tr>
+  <tr>
+    <td><h4 style="font-weight: bold;">Department</h4></td>
+    <td></td>
+    <td></td>
+    <td><h4>software</h4></td>
+  </tr>
+  <tr>
+    <td><h4 style="font-weight:bold;">Location</h4></td>
+    <td></td>
+    <td></td>
+    <td><h4>Trichy</h4></td>
+  </tr>
+
+  </table>
+
+
+
+
+</mat-sidenav>
+<mat-sidenav-content style="height:100%;">
+</mat-sidenav-content>
+     
+</mat-sidenav-container>
+
+
+</mat-grid-tile>
+<mat-grid-tile style="background-color: salmon;" rowspan="1">
+
+  <mat-card style="width: 100%;height:100%" class="mat-elevation-z10">
+    <mat-grid-list cols="3" *ngIf="!isSmall" rowHeight="3:1">
+      <mat-grid-tile><button style="width: 100%;height:100%;border-radius: 30px;border: 2px solid black !important;" mat-button color="primary">Resources</button></mat-grid-tile>
+      <mat-grid-tile><button style="width: 100%;border-radius: 30px;height:100%;border: 2px solid black !important;" mat-button color="warn">Tools</button></mat-grid-tile>
+      <mat-grid-tile><button style="width: 100%;border-radius: 30px;height:100%;border: 2px solid black !important;" mat-button color="accent">Service</button></mat-grid-tile>
+    </mat-grid-list>
+    <hr>
+    <mat-grid-list cols="3" *ngIf="!isSmall" rowHeight="3:1">
+      <mat-grid-tile><button style="width: 100%;border-radius: 30px;height:100%;border: 2px solid black !important;" mat-button color="accent">Material</button></mat-grid-tile>
+      <mat-grid-tile><button style="width: 100%;border-radius: 30px;height:100%;border: 2px solid black !important;" mat-button color="primary">Empulse</button></mat-grid-tile>
+      <mat-grid-tile><button style="width: 100%;border-radius: 30px;height:100%;border: 2px solid black !important;" mat-button color="warn">Clarity</button></mat-grid-tile>
+    </mat-grid-list>
+    <hr>
+    <mat-grid-list cols="3" *ngIf="!isSmall" rowHeight="3:1">
+      <mat-grid-tile><button style="width: 100%;border-radius: 30px;height:100%;border: 2px solid black !important;" mat-button color="warn">WorkSpace</button></mat-grid-tile>
+      <mat-grid-tile><button style="width: 100%;border-radius: 30px;height:100%;border: 2px solid black !important;" mat-button color="accent">VirtualConnect</button></mat-grid-tile>
+      <mat-grid-tile><button style="width: 100%;border-radius: 30px;height:100%;border: 2px solid black !important;" mat-button color="primary">Quantam</button></mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+
+
+</mat-grid-tile>
+</mat-grid-list>
+<mat-toolbar style="margin: 0px;" *ngIf="!isSmall" color="primary">
+   Links
+</mat-toolbar>
+<mat-grid-list cols="3" *ngIf="!isSmall" rowHeight="1:0.15">
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="warn">Resources</button></mat-grid-tile>
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="primary">Tools</button></mat-grid-tile>
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="accent">Service</button></mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="3" *ngIf="!isSmall" rowHeight="1:0.15">
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="warn">Resources</button></mat-grid-tile>
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="primary">Tools</button></mat-grid-tile>
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="accent">Service</button></mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="3" *ngIf="!isSmall" rowHeight="1:0.15">
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="warn">Resources</button></mat-grid-tile>
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="primary">Tools</button></mat-grid-tile>
+  <mat-grid-tile><button style="width: 100%;border-radius: 20px;height:100%" mat-button color="accent">Service</button></mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+
+
+
+
+
+
+
+<mat-grid-list cols="3" *ngIf="isSmall" rowHeight="3:1">
+  <mat-grid-tile><button colspan="1" style="width: 100%;border-radius: 20px;height:100%" mat-button color="warn">Resources</button></mat-grid-tile>
+  <mat-grid-tile><button colspan="1" style="width: 100%;border-radius: 20px;height:100%" mat-button color="primary">Tools</button></mat-grid-tile>
+  <mat-grid-tile><button colspan="1" style="width: 100%;border-radius: 20px;height:100%" mat-button color="accent">Service</button></mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+
+
+
+<mat-card *ngIf="isSmall">
+  <mat-card-header></mat-card-header>
+  <mat-card-content style="padding-left:20%;padding-right:20%;">
+  <mat-form-field appearance="legacy" style="width:100%">
+    <mat-label>ENTER NAME</mat-label>
+    <input matInput placeholder="ex:lara">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="legacy" style="width:100%">
+    <mat-label>ENTER ID</mat-label>
+    <input matInput placeholder="ex:2345">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+
+  <br>
+  <button style="width:50%" mat-button color="primary" class="hov" style="border-radius:30px;background-color:rgb(167, 238, 238) ;">Search</button>
+</mat-card-content>
+</mat-card>

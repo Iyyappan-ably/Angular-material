@@ -1,0 +1,117 @@
+<mat-card *ngIf="!isSmall" style="margin-left:30%;margin-right:30%;border-radius:15px;" class="mat-elevation-z4">
+
+   <mat-card-header>
+      <mat-card-title style="color: rgb(103, 179, 202);">Add New Customer</mat-card-title>
+   </mat-card-header>
+   
+   <mat-card-content style="margin-right:30%;margin-left:20%;">
+   <form #fo="ngForm"> 
+    <mat-form-field appearance="legacy" style="width:100%">
+        <mat-label>Name</mat-label>
+        <input matInput name="Name" required [(ngModel)]="name" placeholder="ex:lara">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="legacy" style="width:100%">
+        <mat-label>Age</mat-label>
+        <input matInput name="Age" required [(ngModel)]="age" placeholder="ex:20">
+      </mat-form-field>
+
+      <br>
+
+      <mat-form-field style="width:100%">
+        <mat-label>Gender</mat-label>
+        <mat-select required name="Gender" [(ngModel)]="gender">
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+            <mat-option value="others">Others</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+
+      <mat-radio-group name="Term" color="primary" required [(ngModel)]="term">
+        <mat-radio-button value="Long-term">Long-term</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-radio-button value="Short-term">Short-term</mat-radio-button>
+   </mat-radio-group>
+
+   <br>
+   <br>
+   <mat-form-field style="width:100%;" appearance="legacy">
+       <mat-label>Languages</mat-label>
+       <mat-select name= "Language" required [(ngModel)]="language" multiple>
+            <mat-option *ngFor="let lang of languages" [value]="lang">{{lang}}</mat-option>
+       </mat-select>
+   </mat-form-field>
+  <br>
+
+      <button [disabled]="fo.invalid" mat-raised-button color="primary" style="border-radius:20px;" (click)="process()">submit</button>
+</form>
+   
+</mat-card-content>
+
+</mat-card>
+
+<!--                       -->
+
+
+
+
+
+
+
+<!--<mat-card *ngIf="isSmall" style="border-radius:10px;">Hey its for you !!!!</mat-card> -->
+
+<mat-card *ngIf="isSmall" style="border-radius:20px;" class="mat-elevation-z2">
+ 
+    <mat-card-header>
+        <mat-card-title style="color: rgb(103, 179, 202);">Add New Customer</mat-card-title>
+     </mat-card-header>  
+     <mat-card-content style="margin-left:20%;margin-right:30%;">
+     <form #lo="ngForm">
+    
+        <mat-form-field appearance="legacy" style="width:100%">
+         <mat-label>Name</mat-label>
+         <input required matInput name="Name" [(ngModel)]="name" placeholder="ex:lara">
+       </mat-form-field>
+       <br>
+
+       <mat-form-field appearance="legacy" style="width:100%">
+         <mat-label>Age</mat-label>
+         <input matInput required name="Age" [(ngModel)]="age" placeholder="ex:20">
+       </mat-form-field>
+ 
+       <br>
+ 
+       <mat-form-field style="width:100%">
+         <mat-label>Gender</mat-label>
+         <mat-select name="Gender" required [(ngModel)]="gender">
+             <mat-option value="male">Male</mat-option>
+             <mat-option value="female">Female</mat-option>
+             <mat-option value="others">Others</mat-option>
+         </mat-select>
+       </mat-form-field>
+       <br>
+       <mat-radio-group name="Term" [(ngModel)]="term" required color="primary">
+            <mat-radio-button value="Long-term">Long-term</mat-radio-button>&nbsp;&nbsp;
+            <mat-radio-button value="Short-term">Short-term</mat-radio-button>
+       </mat-radio-group>
+
+       <br>
+       <br>
+       <mat-form-field style="width:100%;" appearance="legacy">
+           <mat-label>Languages</mat-label>
+           <mat-select name="Lang" required [(ngModel)]="language" multiple>
+                <mat-option *ngFor="let lang of languages" [value]="lang">{{lang}}</mat-option>
+           </mat-select>
+       </mat-form-field>
+      <!-- <p *ngFor="let r of res">{{r}}</p>  -->
+       
+
+      <br>
+      <button [disabled]="lo.invalid" mat-raised-button color="primary" (click)="process()" style="width:50%;border-radius:20px;">Submit</button>
+ </form>
+  
+ </mat-card-content>
+  </mat-card>
+
+  
+  
