@@ -19,7 +19,7 @@ export class AddCustomerComponent implements OnInit{
     
     ngOnInit():void{
       console.log("before");
-      this.br.observe([Breakpoints.XSmall]).subscribe((state : BreakpointState)=>{
+      this.br.observe([Breakpoints.XSmall,`(max-width: 1010px)`]).subscribe((state : BreakpointState)=>{
         this.isSmall = state.matches;
 
       })

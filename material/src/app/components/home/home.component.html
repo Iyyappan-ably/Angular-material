@@ -1,7 +1,7 @@
 
 <h2 *ngIf="!isSmall" style="color:rgb(110, 157, 184);margin-left:50px;margin-top:20px;">Your Profile Details</h2>
   
-    <table *ngIf="!isSmall" style="margin-left: 50px;border-radius: 10px;" class="mat-elevation-z4">
+    <table *ngIf="!isSmall" style="display:flex;flex-direction: column;align-items: center;width:100%;border-radius:10px;" class="mat-elevation-z4">
 
         <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
@@ -32,9 +32,8 @@
      
     </table>
       
-    <h2 *ngIf="isSmall" style="color:rgb(110, 157, 184);margin-top:20px;">Your Profile Details</h2>
-
-    <table *ngIf="isSmall" style="width:100%;border-radius:10px;" class="mat-elevation-z4">
+    <h2 *ngIf="isSmall" style="color:rgb(110, 157, 184);margin-top:20px;margin-left:20px;">Your Profile Details</h2>
+    <table *ngIf="isSmall" style="display:flex;flex-direction: column;align-items: center;width:100%;border-radius:10px;" class="mat-elevation-z4">
 
         <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
@@ -64,4 +63,3 @@
     
      
     </table>
-
