@@ -55,7 +55,7 @@
     <!--actual content-->
     <mat-sidenav-content class="sidenav-content mat-elevation-z10">
       <!--ToolBar-->
-      <mat-toolbar style="width:100%;height:12%;">
+     <mat-toolbar style="width:100%;height:12%;">
         <button mat-button *ngIf="isSmall" (click)="execute(tem)">
             <mat-icon>
               <span class="material-icons-outlined">
@@ -73,7 +73,12 @@
       </button>  
         <h2><b>Management Tool</b></h2> 
       </mat-toolbar>
-      
+  
+
+
+
+
+
       <!--contents-->
       <div class="tooling">
       <router-outlet></router-outlet>

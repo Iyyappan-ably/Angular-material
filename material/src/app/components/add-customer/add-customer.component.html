@@ -65,7 +65,7 @@
     <mat-card-header>
         <mat-card-title style="color: rgb(103, 179, 202);">Add New Customer</mat-card-title>
      </mat-card-header>  
-     <mat-card-content style="margin-left:20%;margin-right:30%;">
+     <mat-card-content style="margin-left:10%;margin-right:20%;">
      <form #lo="ngForm">
     
         <mat-form-field appearance="legacy" style="width:100%">
@@ -90,7 +90,7 @@
          </mat-select>
        </mat-form-field>
        <br>
-       <mat-radio-group name="Term" [(ngModel)]="term" required color="primary">
+       <mat-radio-group style="width: 100%;" name="Term" [(ngModel)]="term" required color="primary">
             <mat-radio-button value="Long-term">Long-term</mat-radio-button>&nbsp;&nbsp;
             <mat-radio-button value="Short-term">Short-term</mat-radio-button>
        </mat-radio-group>
