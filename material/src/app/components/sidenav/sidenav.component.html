@@ -27,8 +27,8 @@
             </span>
           </mat-icon>
       </button>
-      <button mat-button *ngIf="isSmall" style="margin-left:0px;padding-left: 0px;padding-right: 0px;" (click)="welcome1(tem)">Welcome Page</button>
-      <button mat-button *ngIf="!isSmall" style="width:220px;" (click)="welcome()">Welcome Page</button>
+      <button mat-button *ngIf="isSmall" class="but" style="margin-left:0px;padding-left: 0px;padding-right: 0px;" (click)="welcome1(tem)">Welcome Page</button>
+      <button mat-button *ngIf="!isSmall" class="but" style="width:220px;" class="but" (click)="welcome()">Welcome Page</button>
 
       </mat-toolbar>
 
@@ -44,7 +44,11 @@
             <button mat-button color="primary" style="width:220px;" *ngIf="!isSmall" (click)="add()">Add Customer</button>
             <button mat-button color="primary"  style="width:220px;"  *ngIf="isSmall" (click)="add1(tem)">Add Customer</button>
           </mat-list-item>
-          <mat-list-item><button mat-button color="primary" style="width:220px;">Info</button></mat-list-item>
+          <mat-list-item>
+            <button mat-button *ngIf="!isSmall" color="primary" (click)="info()" style="width:220px;">Info</button>
+            <button mat-button *ngIf="isSmall" color="primary" style="width:220px;">Info</button>
+
+          </mat-list-item>
           <mat-list-item><button mat-button color="primary" style="width:220px;">About</button></mat-list-item>
       </mat-list>
   

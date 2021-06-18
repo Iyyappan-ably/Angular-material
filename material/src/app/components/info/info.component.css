@@ -1,0 +1,28 @@
+.sidenav-container{
+    width: 100%;
+    height: 100%;
+}
+.sidenav{
+    width:40%;
+    height: 100%;
+}
+
+.sidenav-content{
+    height : 100%;
+}
+.tool{
+   background-color:#1d8dfd;
+   height:10%;
+}
+.too{
+    height:10%;
+ }
+ .but:hover{
+        background-color: rgb(71, 126, 126) !important;
+        color : white !important
+ }
+ .but{
+     color:black  !important;
+     font-weight: bold;
+     font-size: 20px;
+ }

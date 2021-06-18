@@ -95,4 +95,10 @@ export class SidenavComponent implements OnInit {
     this.router.navigate(['addCustomer']);
   }
 
+
+  info(){
+    this.router.navigate(['info']);
+  }
+
+
 }

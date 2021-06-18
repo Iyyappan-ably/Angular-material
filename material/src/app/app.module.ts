@@ -27,6 +27,8 @@ import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './components/dialog/dialog.component'; 
 import {MatGridListModule} from '@angular/material/grid-list';
+import { InfoComponent } from './components/info/info.component';
+import { InfoOneComponent } from './components/info-one/info-one.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HomeComponent,
     ProductsComponent,
     AddCustomerComponent,
-    DialogComponent
+    DialogComponent,
+    InfoComponent,
+    InfoOneComponent
   ],
   entryComponents : [DialogComponent],
   imports: [

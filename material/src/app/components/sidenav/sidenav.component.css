@@ -18,3 +18,9 @@
     overflow-y:scroll;
     height : 80%;
 }
+
+.but:hover{
+    border-radius: 30px;
+}
+
+
